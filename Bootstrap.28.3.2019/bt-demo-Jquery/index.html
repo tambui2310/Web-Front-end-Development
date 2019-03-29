@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Jquery</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2>Demo Jquery</h2>
+		<br>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#home">find()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu1">hide() & show()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu2">toggle()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu3">animate()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu4">fadeIn() & fadeOut()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu5">slideUp() & slideOut()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu6">append() & prepend()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu7">on() & off()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu8">attr()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu9">val()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu10">text()</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu11">each()</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div id="home" class="container tab-pane active"><br>
+				<h3>Tìm kiếm</h3>
+				<p>Tìm kiếm phần tử thẻ trong thẻ p </p>
+			</div>
+			<div id="menu1" class="container tab-pane fade"><br>
+				<h3>Hide and show</h3>
+				<span id="find">Tâm</span><br>
+				<button id="hide">hide</button>
+				<button id="show">show</button>
+			</div>
+			<div id="menu2" class="container tab-pane fade"><br>
+				<h3>Hàm toggle()</h3>
+				<button id="toggle">Click here</button>
+				<p>Thích nhẫn tâm</p>
+			</div>
+			<div id="menu3" class="container tab-pane fade"><br>
+				<h3>Hàm animate()</h3>
+				<button id="animate">Click here</button>
+				<div id="a" style="background-color: green; width: 50px; height: 200px;">
+				</div>
+			</div>
+			<div id="menu4" class="container tab-pane fade"><br>
+				<h3>fadeIn and fadeOut</h3>
+				<span id="find">Tâm</span><br>
+				<button id="fadeout">fadeOut</button>
+				<button id="fadein">fadeIn</button>
+			</div>
+			<div id="menu5" class="container tab-pane fade"><br>
+				<h3>slideUp and slideOut</h3>
+				<img id="slide" src="troll.png">
+				<button id="slideup">slideUp</button>
+				<button id="slidedown">slideDown</button>
+			</div>
+			<div id="menu6" class="container tab-pane fade"><br>
+				<h3>append and prepend</h3>
+				<ul id="testAppend">
+					<li>Học Css</li>
+					<li>Học JS</li>
+				</ul>
+				<button id="append">append</button>
+				<button id="prepend">prepend</button>
+			</div>
+			<div id="menu7" class="container tab-pane fade"><br>
+				<h3>on and off</h3>
+				<p id="on">Tâm Bùi</p>
+				<button id="off">Off</button>
+			</div>
+			<div id="menu8" class="container tab-pane fade"><br>
+				<h3>attr()</h3>
+				<img id="attr" src="troll.png">
+				<button id="attrImage">Set the width attribute of the image</button>
+			</div>
+			<div id="menu9" class="container tab-pane fade"><br>
+				<h3>val()</h3>
+				<input type="text" name="" id="val">
+				<button id="addValue">Set the value of the input field</button>
+			</div>
+			<div id="menu10" class="container tab-pane fade"><br>
+				<h3>text()</h3>
+				<p id="text">Tâm đẹp trai !!!</p>
+				<button id="setValue">Set the value of the input field</button>
+			</div>
+			<div id="menu11" class="container tab-pane fade"><br>
+				<h3>each()</h3>
+				<p class="each">Tâm đẹp trai !!!</p>
+				<p class="each">Tâm là vô địch !!!</p>
+				<button id="setEach">Click here</button>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#hide").click(function(){
+			$("span").hide();
+		});
+		$("#show").click(function(){
+			$("span").show();
+		});
+		$("#fadeout").click(function(){
+			$("span").fadeOut(1500);
+		})
+		$("#fadein").click(function(){
+			$("span").fadeIn(2000);
+		})
+		$("#home").find("p").css({"color": "blue"});
+
+		$("#toggle").click(function(){
+			$("p").toggle(1000,);
+		});
+		$("#animate").click(function(){
+			$("#a").animate({width:'500px'},2000);
+		});
+		$("#slidedown").click(function(){
+			$("#slide").slideDown(1500);
+		});
+		$("#slideup").click(function(){
+			$("#slide").slideUp(1500);
+		});
+		$("#append").click(function(){
+			$("#testAppend").append("<li> Học PHP </li>");
+		});
+		$("#prepend").click(function(){
+			$("#testAppend").prepend("<li> Học PHP </li>");
+		});
+		$("#on").click(function(){
+			$(this).css("background-color", "pink");
+		});
+		$("#off").click(function(){
+			$("#on").off();
+		})
+		$("#attrImage").click(function(){
+			$("#attr").attr("width", "500");
+		});
+		$("#addValue").click(function(){
+			$("#val").val("Tâm đẹp trai");
+		});
+		$("#setValue").click(function(){
+			$("#text").text("Tâm là vô địch !!!");
+		});
+		$("#setEach").click(function(){
+			$(".each").each(function(){
+				alert($(this).text());
+			});
+		})
+	});
+</script>
+</html>
