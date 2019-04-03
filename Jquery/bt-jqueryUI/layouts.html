@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>các hiệu ứng thông dụng của jQuery UI</h2>
+		<br>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#home">Draggable</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu1">Droppable</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu2">Resizable</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu3">Selectable</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu4">Sortable</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu5">Accordion</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu6">Autocomplete</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu7">Datepicker</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu8">Dialog</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu9">Slider</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu10">Progressbar</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu11">Spinner</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu12">Tabs</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#menu13">Add class & Remove  class</a>
+			</li>
+		</ul>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div id="home" class="container tab-pane active"><br>
+			<h3>Kéo thả</h3>
+			<p id="draggable">Drag me!</p>
+		</div>
+		<div id="menu1" class="container tab-pane fade"><br>
+			<h3>Droppable</h3>
+			<p id="draggable1">Drag me</p><br>
+			<div id="droppable" class="ui-widget-header">
+				<p>Drop here</p>
+			</div>
+		</div>
+		<div id="menu2" class="container tab-pane fade"><br>
+			<p id="resizable"></p>
+		</div>
+		<div id="menu3" class="container tab-pane fade"><br>
+			<h3>Hàm animate()</h3>
+			<ol id="selectable">
+				<li class="ui-widget-content">Item 1</li>
+				<li class="ui-widget-content">Item 2</li>
+				<li class="ui-widget-content">Item 3</li>
+				<li class="ui-widget-content">Item 4</li>
+				<li class="ui-widget-content">Item 5</li>
+				<li class="ui-widget-content">Item 6</li>
+				<li class="ui-widget-content">Item 7</li>
+			</ol>
+		</div>
+		<div id="menu4" class="container tab-pane fade"><br>
+			<ul id="sortable">
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+				<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+			</ul>
+		</div>
+		<div id="menu5" class="container tab-pane fade"><br>
+			<div id="accordion">
+				<h3>Section 1</h3>
+				<div>
+					<p>
+						Thích nhẫn tâm!
+					</p>
+				</div>
+				<h3>Section 2</h3>
+				<div>
+					<p>
+						Anh là vô địch!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="menu6" class="container tab-pane fade"><br>
+			<div class="ui-widget">
+				<label for="tags">Tags: </label>
+				<input id="tags">
+			</div>
+		</div>
+		<div id="menu7" class="container tab-pane fade"><br>
+			<p>Date: <input type="text" id="datepicker"></p>
+		</div>
+		<div id="menu8" class="container tab-pane fade"><br>
+			<div id="dialog" title="Basic dialog">
+				<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+			</div>
+		</div>
+		<div id="menu9" class="container tab-pane fade"><br>
+			<div id="slider"></div>
+		</div>
+		<div id="menu10" class="container tab-pane fade"><br>
+			<div id="progressbar"></div>
+		</div>
+		<div id="menu11" class="container tab-pane fade"><br>
+			<p>
+				<label for="spinner">Select a value:</label>
+				<input id="spinner" name="value">
+			</p>
+
+			<p>
+				<button id="disable">Toggle disable/enable</button>
+				<button id="destroy">Toggle widget</button>
+			</p>
+
+			<p>
+				<button id="getvalue">Get value</button>
+				<button id="setvalue">Set value to 5</button>
+			</p>
+		</div>
+		<div id="menu12" class="container tab-pane fade"><br>
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Tab 1</a></li>
+					<li><a href="#tabs-2">Tab 2</a></li>
+					<li><a href="#tabs-3">Tab 3</a></li>
+				</ul>
+				<div id="tabs-1">
+					<p>Sư thầy Thích thịt chó</p>
+				</div>
+				<div id="tabs-2">
+					<p>Sư thầy thích thủ dâm</p>
+				</div>
+				<div id="tabs-3">
+					<p>Sư thầy thích đủ thứ</p>
+				</div>
+			</div>
+		</div>
+		<div id="menu13" class="container tab-pane fade"><br>
+			<div class="toggler">
+				<div id="effect" class="ui-corner-all">
+					Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+				</div>
+			</div>
+			<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+		</div>
+	</div>
+</div>
+
+</body>
+<script src="script.js">
+</script>
+</html>
